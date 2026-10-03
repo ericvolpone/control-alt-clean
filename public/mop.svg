@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bucket2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffc2e0"/>
+      <stop offset="1" stop-color="#ff8fc7"/>
+    </linearGradient>
+    <linearGradient id="water2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bff3ff"/>
+      <stop offset="1" stop-color="#8fe3f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- mop handle -->
+  <rect x="40" y="6" width="5" height="32" rx="2.5" fill="#f6b3d4" transform="rotate(16 42 22)"/>
+  <!-- mop head -->
+  <path d="M30 34c0-5 4-8 8-8s8 3 8 8c0 2-1 3-3 3H33c-2 0-3-1-3-3z" fill="#ffd6ea"/>
+  <g stroke="#ffb3d9" stroke-width="2.4" stroke-linecap="round">
+    <line x1="32" y1="37" x2="30" y2="46"/>
+    <line x1="36" y1="38" x2="35" y2="47"/>
+    <line x1="40" y1="38" x2="40" y2="47"/>
+    <line x1="44" y1="38" x2="45" y2="47"/>
+  </g>
+
+  <!-- bucket body -->
+  <path d="M14 36h30l-3.5 18a3 3 0 0 1-3 2.5H20.5a3 3 0 0 1-3-2.5L14 36z" fill="url(#bucket2)"/>
+  <path d="M16.2 40h25.6l-.7 4H16.9l-.7-4z" fill="url(#water2)"/>
+  <rect x="11" y="32" width="36" height="6" rx="3" fill="#ff9fcf"/>
+  <path d="M16 33c2-7 28-7 30 0" fill="none" stroke="#ff9fcf" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- bubbles -->
+  <circle cx="22" cy="24" r="3.2" fill="#ffffff" opacity="0.95"/>
+  <circle cx="29" cy="19" r="2.2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="18" cy="29" r="2" fill="#ffffff" opacity="0.85"/>
+</svg>

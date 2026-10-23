@@ -6,14 +6,14 @@ import type { ChoreRepository } from './repository';
 const STORAGE_KEY = 'control-alt-clean.chores.v1';
 
 /** Generate a reasonably unique id. Uses crypto.randomUUID when available. */
-function newId(): string {
+export function newId(): string {
   if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
     return crypto.randomUUID();
   }
   return `id-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
 
-function nowISO(): string {
+export function nowISO(): string {
   return new Date().toISOString();
 }
 

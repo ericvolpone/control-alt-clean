@@ -52,3 +52,18 @@ export function formatFriendlyDate(iso: string): string {
     return iso;
   }
 }
+
+/**
+ * Add a number of calendar months to a local ISO date. Clamps to the last day
+ * of the target month, so Nov 30 minus 3 months is Aug 30 and May 31 minus 3
+ * months is Feb 28/29 rather than rolling into March.
+ */
+export function addMonths(iso: string, months: number): string {
+  const date = fromISODate(iso);
+  const day = date.getDate();
+  date.setDate(1);
+  date.setMonth(date.getMonth() + months);
+  const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  date.setDate(Math.min(day, lastDay));
+  return toISODate(date);
+}

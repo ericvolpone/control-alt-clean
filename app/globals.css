@@ -235,6 +235,123 @@ h2,
   color: #fff;
 }
 
+/* ---------- Scheduled / One-Offs tabs ---------- */
+.tabs {
+  display: flex;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  padding: 4px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.tabs button {
+  flex: 1;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.95rem;
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  padding: 10px 12px;
+  min-height: 44px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tabs button.active {
+  background: linear-gradient(135deg, var(--pink), var(--pink-deep));
+  color: #fff;
+}
+
+/* ---------- One-off list ---------- */
+.oneoff-add {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+}
+
+.oneoff-add input {
+  flex: 1;
+  min-width: 0;
+}
+
+.oneoffs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.oneoff {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 10px 10px 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.oneoff-check {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--pink);
+  background: var(--surface-soft);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oneoff-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.oneoff-title {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.oneoff-date {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+.oneoff.done {
+  background: var(--surface-soft);
+  box-shadow: none;
+}
+
+.oneoff.done .oneoff-check {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.oneoff.done .oneoff-title {
+  text-decoration: line-through;
+  color: var(--text-soft);
+}
+
+.oneoff .icon-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+}
+
 /* ---------- Chore tiles grid ---------- */
 .tiles {
   display: grid;

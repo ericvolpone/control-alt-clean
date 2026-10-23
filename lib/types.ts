@@ -48,3 +48,21 @@ export interface ChoreInput {
   frequencyUnit: FrequencyUnit;
   subChores: string[];
 }
+
+/**
+ * A one-time chore with no frequency: it's either open or done. Completed
+ * one-offs are kept as history for `ONE_OFF_HISTORY_MONTHS`, then purged.
+ */
+export interface OneOffChore {
+  id: string;
+  title: string;
+  /** The date it was completed ("YYYY-MM-DD"), or null while still open. */
+  completedDate: string | null;
+  /** ISO datetime the record was created. */
+  createdAt: string;
+  /** ISO datetime the record was last modified. */
+  updatedAt: string;
+}
+
+/** How long completed one-offs stay in the history before auto-deletion. */
+export const ONE_OFF_HISTORY_MONTHS = 3;

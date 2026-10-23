@@ -22,10 +22,16 @@ responsive — it's built to live on your phone and scale up to desktop.
   - 🟡 **Yellow** — 0–25% remaining (due soon)
   - 🔴 **Red** — overdue
 
+- **One-Offs tab** — a simple checklist for chores that don't repeat. Add a
+  title, tick it off when done (tap again to undo). Completed one-offs stay
+  visible for 3 months, then are automatically deleted the next time the app
+  opens.
+
 ## Storage
 
 Chores are stored in the browser's `localStorage`, but behind a swappable
-`ChoreRepository` interface ([lib/storage/repository.ts](lib/storage/repository.ts)).
+`ChoreRepository` interface ([lib/storage/repository.ts](lib/storage/repository.ts))
+(one-offs use `OneOffRepository` in [lib/storage/oneOffRepository.ts](lib/storage/oneOffRepository.ts)).
 Every method is async, so moving to a real SQL database later means writing one
 new implementation and changing a single line in
 [lib/storage/index.ts](lib/storage/index.ts) — no UI changes required.
